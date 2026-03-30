@@ -1,0 +1,3 @@
+2026-03-30 17:29:58 | GET | table=- | id=- | error | 401 | authentification incorrecte
+2026-03-30 17:29:58 | GET | table=- | id=- | error | 401 | authentification incorrecte
+2026-03-30 17:30:13 | GET | table=livre | id= | success | 200 | OK
