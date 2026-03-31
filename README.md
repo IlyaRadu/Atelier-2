@@ -1,41 +1,54 @@
 # MediaTekDocuments — API PHP (BTS)
 
-## 1) Description du projet
-Ce projet est une API REST en PHP pour gérer une médiathèque. On peut lire les livres, DVD et revues dans une base MySQL.
+## Description
 
-## 2) Technologies
-- PHP
-- MySQL
-- REST API
-- Postman
+Ce projet correspond à l’atelier 2.
+Le but est de mettre en place une API en PHP pour accéder aux données d’une médiathèque (livres, DVD, revues).
 
-## 3) Lancer le projet en local (simple)
-1. Dézipper le projet.
-2. Importer la base `mediatek86.sql`.
-3. Lancer le serveur PHP sur `localhost:8000`.
+L’API permet surtout de faire des requêtes simples pour récupérer les données depuis une base MySQL.
 
-Exemple de commandes :
+## Technologies utilisées
+
+* PHP
+* MySQL
+* API REST
+* Postman
+
+## Lancement du projet
+
+1. Dézipper le projet
+2. Créer la base de données `mediatek86`
+3. Importer le fichier `mediatek86.sql`
+4. Lancer le serveur PHP
+
+Exemple :
 
 ```bash
 mysql -u root -e "CREATE DATABASE mediatek86;"
 mysql -u root mediatek86 < mediatek86.sql
-php -S localhost:8000 -t src
+php -S localhost:8000 -t .
 ```
 
-## 4) Exemples de requêtes (GET)
-- Livres : `http://localhost:8000/index.php?table=livre`
-- DVD : `http://localhost:8000/index.php?table=dvd`
-- Revues : `http://localhost:8000/index.php?table=revue`
+## Exemples de requêtes
 
-## 5) Structure du projet
-- `index.php` : point d’entrée, lit les paramètres et appelle le contrôleur.
-- `Controle.php` : vérifie la demande, envoie la réponse JSON.
-- `MyAccessBDD.php` : contient les requêtes SQL.
+* Livres : http://localhost:8000/index.php?table=livre
+* DVD : http://localhost:8000/index.php?table=dvd
+* Revues : http://localhost:8000/index.php?table=revue
 
-## 6) Ce qui a été réalisé
-- Tests manuels avec Postman
-- Log simple dans `logs.txt`
-- Sécurité basique (Basic Auth via `.env`)
+## Structure
 
-## 7) Note importante
-Projet fait sur macOS sans Visual Studio, donc la partie desktop C# n’est pas complète.
+* index.php : point d’entrée de l’API
+* Controle.php : gestion des requêtes
+* MyAccessBDD.php : accès à la base de données
+
+## Travail réalisé
+
+* mise en place et test de l’API
+* tests avec Postman
+* ajout de logs (logs.txt)
+* sécurisation basique avec authentification
+
+## Remarque
+
+Le projet a été réalisé sur macOS sans Visual Studio.
+La partie C# desktop n’a donc pas été développée complètement.
